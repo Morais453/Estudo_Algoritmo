@@ -1,0 +1,5 @@
+v1= float(input('Insira um número:  '))
+v2= float(input('Insira um número:  '))
+v3= float(input('Insira um número:  '))
+v4= float(input('Insira um número:  '))
+print('A média entre os 4 valores inseridos é {}'.format((v1+v2+v3+v4)/4))
