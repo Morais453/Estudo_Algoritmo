@@ -14,7 +14,7 @@ while True:
             B = int(input('O segundo valor tem que ser maior que o primeiro\nInsira novamente o segundo valor: '))
         else:
             print('-'*15)
-            for x in range(B, A - 1, -1):
-                print(f'{X} x {x} = {X * x}')
+            for I in range(B, A - 1, -1):
+                print(f'{X} x {I} = {X * I}')
             print('-' * 15)
             break

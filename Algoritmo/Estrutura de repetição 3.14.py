@@ -1,25 +1,27 @@
-maior = menor = soma = media = P = N = 0
+MAIOR = MENOR = soma = media = POSITIVO = NEGATIVO = 0
 cont = 1
 while cont < 11:
 
-    n = int(input(f'Insira o valor {cont}: '))
+    NUMERO = int(input(f'Insira o valor {cont}: '))
 
-    if n > 20:
+    if NUMERO > 20:
         print('Valor incorreto, insira um valor positivo.')
         continue
 
-    soma += n
+    soma += NUMERO
     media = soma / cont
 
-    if n > maior:
-        maior = n
+    if NUMERO > MAIOR:
+        MAIOR = NUMERO
 
-    if n < menor or cont == 1:
-        menor = n
+    if NUMERO < MENOR or cont == 1:
+        MENOR = NUMERO
 
-    if n > 0:
-        P += 1
-    if n < 0:
-        N += 1
+    if NUMERO > 0:
+        POSITIVO += 1
+    if NUMERO < 0:
+        NEGATIVO += 1
     cont += 1
-print(f'O maior número foi {maior} e o menor foi {menor}.\nDos {cont-1} números {P} deles são positivos e {N} são negativos\na soma entre os números informados foi {soma} e a média foi {media}')
+print(f'O MAIOR número foi {MAIOR} e o MENOR foi {MENOR}'
+      f'\nDos números {(POSITIVO/(cont-1))*100}% deles são positivos e {(NEGATIVO/(cont-1))*100}% são negativos'
+      f'\nA soma entre os números informados foi {soma} e a média foi {media}')
