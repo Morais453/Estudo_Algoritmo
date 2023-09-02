@@ -1,9 +1,9 @@
-l = []
+LISTA = []
 
 for i in range(0,10):
     n = int(input(f'Insira o valor {i+1}: '))
-    l.append(n)
+    LISTA.append(n)
 
-l.reverse()
+LISTA.reverse()
 
-print(l)
+print(LISTA)
