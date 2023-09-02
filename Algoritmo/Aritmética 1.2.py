@@ -1,3 +1,3 @@
-aresta= float(input('Informe a medida da aresta do quadrado em centimetros:  '))
+ARESTA = float(input('Informe a medida da aresta do quadrado em centimetros:  '))
 
-print('Com o valor {} informado temos como área do quadrado {}cm²'.format(aresta, aresta**2))
+print(f'Com o valor {ARESTA} informado temos como área do quadrado {ARESTA**2}cm²'))

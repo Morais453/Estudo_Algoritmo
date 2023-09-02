@@ -1,5 +1,5 @@
 import math
-d= int(input('Insira o diâmetro da esfera: '))
-r= d/2
-v= 4/3*math.pi*r**3
-print(f'O volume da esfera é igual a {v:0.2f}')
+DIAMETRO = int(input('Insira o diâmetro da esfera: '))
+RAIO = DIAMETRO/2
+VOLUME = 4/3 * math.pi * RAIO**3
+print(f'O volume da esfera é igual a {VOLUME:0.2f}')

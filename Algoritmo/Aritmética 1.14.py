@@ -1,11 +1,11 @@
 from math import pi
 
-R= float(input('Insira o raio da esfera:  '))
+RAIO= float(input('Insira o raio da esfera:  '))
 
-VE= (4/3)*pi*R**3
+VOLUME_DA_ESFERA= (4/3)*pi*R**3
 
-A= float(input('Insira o valor da aresta:  '))
+ARESTA= float(input('Insira o valor da aresta:  '))
 
-VC= A**3
+VOLUME_CUBO= ARESTA**3
 
-print('O volume livre que contenha uma esfera inscrita em um cubo é {}'.format(VC-VE))
+print('O volume livre que contenha uma esfera inscrita em um cubo é {}'.format(VOLUME_CUBO-VOLUME_DA_ESFERA))
