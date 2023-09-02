@@ -6,6 +6,6 @@ if v1 == v2:
     print('Os valores identificados são iguais!')
     print('-' * 36)
 elif v1 > v2:
-    print('O valor ',v1,' é maior')
+    print(f'O valor {v1} é maior')
 else:
-    print('O valor ', v2, ' é maior')
+    print(f'O valor {v2} é maior')

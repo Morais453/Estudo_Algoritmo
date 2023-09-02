@@ -1,8 +1,8 @@
-b = float(input('Insira o valor da base do terreno:  '))
-h = float(input('Insira o valor da altura do terreno:  '))
+BASE = float(input('Insira o valor da base do terreno:  '))
+ALTURA = float(input('Insira o valor da altura do terreno:  '))
 
-a= b*h
-if a>100:
-    print('Terreno grande com área igual a {}'.format(a))
+AREA= BASE*ALTURA
+if AREA > 100:
+    print(f'Terreno grande com área igual a {AREA}')
 else:
-    print(f'Terreno pequeno de área {a}')
+    print(f'Terreno pequeno de área {AREA}')

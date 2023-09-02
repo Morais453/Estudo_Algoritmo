@@ -5,4 +5,4 @@ print(f'Sua média foi {media:.1f}')
 if media >= 5:
     print('Você foi aprovado')
 else:
-    print('Reprovado meu patrão')
+    print('Reprovado')
