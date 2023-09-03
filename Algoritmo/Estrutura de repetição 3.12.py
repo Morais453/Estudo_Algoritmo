@@ -9,4 +9,4 @@ while True:
         print(f"A soma dos primeiros {n} valores da sequência é: {soma:.2f}")
         break
     else:
-        print("Valor fora do intervalo permitido. Digite um valor positivo menor que 100.")
+        print("Valor fora do intervalo permitido. Digite um valor positivo menor que 50.")
