@@ -1,17 +1,19 @@
-nome = []
-idade = []
-Quant_Mulher = 0
+GERAL_PESSOAS = []
+PESSOAS = {}
+Mulher = False
 for c in range(0,20):
-    n = input('Informe seu nome: ').upper().strip()
-    i = input('Informe sua idade: ').strip()
-    s = input('Informe seu sexo[M/F]: ').upper().strip()
-    if s in 'F':
-        nome.append(n)
-        idade.append(i)
-        Quant_Mulher += 1
-if Quant_Mulher > 0:
+    PESSOAS['Nome'] = input('Informe seu  NOME: ').capitalize().strip()
+    PESSOAS['Idade'] = input('Informe sua idade: ').strip()
+    PESSOAS['Sexo'] = input('Informe seu sexo[M/F]: ').upper().strip()
+    GERAL_PESSOAS.append(PESSOAS.copy())
+
+    if PESSOAS['Sexo'] in 'F':
+        Mulher = True
+
+if Mulher:
     print('As mulheres listadas são: ')
-    for i in range(Quant_Mulher):
-        print(f'{nome[i]} com {idade[i]} anos')
+    for i in GERAL_PESSOAS:
+        if i['Sexo'] in 'F':
+            print(f'{i["Nome"]} com {i["Idade"]} anos')
 else:
     print('Nenhuma mulher foi listada')

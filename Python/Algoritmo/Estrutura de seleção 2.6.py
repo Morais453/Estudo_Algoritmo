@@ -1,7 +1,21 @@
-p1 = int(input('Insira o valor:  '))
-p2 = int(input('Insira o valor:  '))
-p3 = int(input('Insira o valor:  '))
+Valor_1 = int(input('Insira o valor:  '))
+Maior = Valor_1
 
-l = [p1, p2, p3]
+Valor_2 = int(input('Insira o valor:  '))
+if Valor_2 > Maior:
+    Maior = Valor_2
 
-print(max(l))
+Valor_3 = int(input('Insira o valor:  '))
+if Valor_3 > Maior:
+    Maior = Valor_3
+
+print(Maior)
+
+
+Valor_1 = int(input('Insira o valor:  '))
+Valor_2 = int(input('Insira o valor:  '))
+Valor_3 = int(input('Insira o valor:  '))
+
+Lista = [Valor_1, Valor_2, Valor_3]
+
+print(max(Lista))

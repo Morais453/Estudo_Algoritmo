@@ -1,14 +1,18 @@
-a= int(input('Lado a:  '))
-b= int(input('Lado b:  '))
-c= int(input('Lado c:  '))
+a = int(input('Lado A:  '))
+b = int(input('Lado B:  '))
+c = int(input('Lado C:  '))
 
-if (a < b + c and b < a+c and c < a+b):
+#Condição de existencia do triângulo
+if (a < b + c and b < a + c and c < a + b):
+    
     if (a == b and b == c):
         print('Triângulo equilátero')
+
+    elif (a == b or a==c or b==c):
+        print('Triângulo isósceles')
+
     else:
-        if (a == b or a==c or b==c):
-            print('Triângulo isósceles')
-        else:
-            print('Triângulo escaleno')
+        print('Triângulo escaleno')
+        
 else:
     print("Triângulo não formado")

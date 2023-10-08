@@ -10,6 +10,7 @@ for c in range(0,20):
 
     lista.append([idade,nome,sexo])
 lista.sort(reverse=True)
+
 print('A partir dos dados informados a lista em ordem Decrescente de idade é:')
 for i in lista:
     print(f'Temos {i[1]}, {i[2]} com {i[0]} anos')

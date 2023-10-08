@@ -1,6 +1,6 @@
 lista = []
 for c in range(0,20):
-    nome = input('Insira seu nome: ').upper()
+    nome = input('Insira seu nome: ').capitalize()
     sexo = input('Informe seu sexo[M/F]: ').upper()
     idade = int(input('Insira sua idade: '))
     if sexo in 'F':

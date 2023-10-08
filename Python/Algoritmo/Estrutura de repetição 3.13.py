@@ -1,16 +1,15 @@
 maior = soma = media = 0
-cont = 1
-while cont < 11:
 
-    n = int(input(f'Insira o valor {cont}: '))
+for i in range(10):
+
+    n = int(input(f'Insira o valor {i + 1}: '))
 
     if n <= 0:
         print('Valor incorreto, insira um valor positivo.')
         continue
 
     soma += n
-    media = soma / cont
-    cont += 1
+    media = soma / (i + 1)
 
     if n > maior:
         maior = n

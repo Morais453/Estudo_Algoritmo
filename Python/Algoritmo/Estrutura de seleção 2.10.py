@@ -1,27 +1,36 @@
-a= int(input('Indique o primeiro termo:  '))
-b= int(input('indique o segundo termo:  '))
-c= int(input('Indique o termo independente:  '))
-delta= b**2 -4*a*c
+A = int(input('Indique o primeiro termo:  '))
 
-if b>0 and c>0:
-    print(f' A função informada foi {a}x²+{b}x+{c}')
-elif c>0:
-    print(f' A função informada foi {a}x²{b}x+{c}')
-elif b>0:
-    print(f' A função informada foi {a}x²+{b}x{c}')
+B = int(input('indique o segundo termo:  '))
+
+C = int(input('Indique o termo independente:  '))
+
+Delta = B ** 2 - 4 * A * C
+
+if B > 0 and C > 0:
+    print(f' A função informada foi {A}x²+{B}x+{C}')
+
+elif C>0:
+    print(f' A função informada foi {A}x²{B}x+{C}')
+
+elif B > 0:
+    print(f' A função informada foi {A}x²+{B}x{C}')
+
 else:
-    print(f' A função informada foi {a}x²{b}x{c}')
+    print(f' A função informada foi {A}x²{B}x{C}')
 
-print("delta igual a", delta)
-if delta>0:
+print(f"Delta igual a {Delta}")
+
+if Delta > 0:
     print('Raízes diferentes')
-    x1= (-b + delta**(1/2)) / (2*a)
-    x2= (-b - delta**(1/2)) / (2*a)
-    print('As raízes encontradas são {} e {}'.format(x1,x2))
-elif delta==0:
+    x1 = (-B + Delta**(1/2)) / (2*A)
+    x2 = (-B - Delta**(1/2)) / (2*A)
+    print(f'As raízes encontradas são {x1} e {x2}')
+
+elif Delta == 0:
     print('Raízes iguais')
-    x= (-b + delta**(1/2)) / (2*a)
+    x = (-B + Delta**(1/2)) / (2*A)
     print(f'A raíz encontrada foi {x}')
+
 else:
     print('Não há raiz real')
     

@@ -1,23 +1,20 @@
-nome = []
-idade = []
-sexo = []
-cont= 0
+Geral = []
+Maior = []
+Pessoa = {}
+
 for c in range(0,20):
-    nome_inserido = input('Informe seu nome: ').upper().strip()
-    idade_inserida = int(input('Informe sua idade: '))
-    genero = input('Informe seu sexo[M/F]: ').upper().strip()
-    if idade_inserida >= 18:
-        nome.append(nome_inserido)
-        idade.append(idade_inserida)
-        if genero in 'M':
-            sexo.append('Homem')
-        if genero in 'F':
-            sexo.append('Mulher')
-        cont += 1
-if cont > 0:
+    Pessoa['Nome'] = input('Informe seu nome: ').capitalize().strip()
+    Pessoa['Idade'] = int(input('Informe sua idade: '))
+    Pessoa['Sexo'] = input('Informe seu sexo[M/F]: ').upper().strip()
+    Geral.append(Pessoa.copy())
+    if Pessoa['Idade'] >= 18:
+        Maior.append(Pessoa.copy())
+
+if len(Maior) > 0:
     print('As pessoas maiores de idade inseridas são: ')
-    for i in range(cont):
-        print(f'{nome[i]}, {sexo[i]} de {idade[i]} anos')
-    print(f'Foram listadas um total de {cont} pessoas maiores de idade\nE esse valor representa {(cont/20)*100}% da quantidade de pessoas')
+    for i in Maior:
+        print(f'{i["Nome"]}, {i["Sexo"]} de {i["Idade"]} anos')
+    print(f'Foram listadas um total de {len(Maior)} pessoas maiores de idade\n'
+          f'E esse valor representa {(len(Maior)/len(Geral))*100}% da quantidade de pessoas')
 else:
     print('Das pesoas inseridas, nenhuma é maior de idade')

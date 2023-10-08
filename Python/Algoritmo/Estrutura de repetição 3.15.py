@@ -1,41 +1,44 @@
 maior = menor = soma = media = POSITIVOS = NEGATIVOS = 0
-cont = 1
-VALOR_MOSTRAR = int(input('Quantos valores você quer somar?'))+1
-while True:
-    while cont < VALOR_MOSTRAR:
+Quant = int(input('Quantos valores você quer informar? '))
 
-        NUMERO = int(input(f'Insira o valor {cont}[menor igual a 20]: '))
-        print('-' * 40)
-        if NUMERO > 20:
-            print('Valor incorreto, insira um valor válido[menor igual a 20].')
-            continue
+while 0 > Quant or Quant > 20:
+    Quant = int(input('Quantos valores você quer informar? '))
+
+while True:
+    for i in range(Quant):
+
+        NUMERO = int(input(f'Insira o valor {i + 1}: '))
 
         soma += NUMERO
-        media = soma / cont
+        media = soma / (i + 1)
 
-        if NUMERO > maior or cont == 1:
+        if NUMERO > maior or i == 0:
             maior = NUMERO
 
-        if NUMERO < menor or cont == 1:
+        if NUMERO < menor or i == 0:
             menor = NUMERO
 
         if NUMERO > 0:
             POSITIVOS += 1
         if NUMERO < 0:
             NEGATIVOS += 1
-        cont += 1
+
     print(f'O maior número foi {maior} e o menor foi {menor}.'
-          f'\nDos {cont-1} valores inseridos:'
-          f'\n{(POSITIVOS/(cont-1))*100:.1f}% deles são positivos'
-          f'\n{(NEGATIVOS/(cont-1))*100:.1f}% são negativos'
-          f'\na soma entre os números informados foi {soma} e a média foi {media}')
+          f'\nDos {Quant} valores inseridos:'
+          f'\n{(POSITIVOS/(Quant))*100:.1f}% deles são positivos'
+          f'\n{(NEGATIVOS/(Quant))*100:.1f}% são negativos'
+          f'\na soma entre os números informados foi {soma} e a média foi {media:0.1f}')
 
     print('-'*40)
-    print('Quantos valores você ainda quer somar?')
-    NUMERO = int(input('Insira quantos ainda quer: '))
-    print('-' * 40)
-    if NUMERO == 0:
+    Escolha = input('Quantos valores você ainda quer somar? [S/N]').upper()
+    while Escolha not in 'SN':
+        Escolha = input('Quantos valores você ainda quer somar? [S/N]').upper()
+    if Escolha in 'N':
         break
+    
     else:
-        VALOR_MOSTRAR += NUMERO
+        maior = menor = soma = media = POSITIVOS = NEGATIVOS = 0
+        Quant = int(input('Insira quantos valores você quer: '))
+    print('-' * 40)
+
 print('Programa encerrado volte sempre')

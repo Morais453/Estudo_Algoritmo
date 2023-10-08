@@ -15,7 +15,7 @@ while True:
         if vetor[i] == numero:
             print(f'Número {numero} foi encontrado na posiçção {i} do vetor OU {i+1} na ordem de inserção')
         if (i+1 == len(vetor)) and (vetor[i] != numero):
-            print('Valor não encontrado')
+            print('Valor não encontrado!')
 
     continuar = input('Deseja continuar[S/N]').upper()
     if continuar != 'S':

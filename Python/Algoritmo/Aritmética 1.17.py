@@ -1,4 +1,4 @@
-import math
+from math import log
 
 x = int(input('Digite o valor da base:  '))
 
@@ -8,4 +8,4 @@ exp= x**y
 
 print(f'{x} elevado a  {y} é igual a {exp}')
 
-print(f'log de {exp} na base {x} é {math.log(exp, x)}')
+print(f'log de {exp} na base {x} é {log(exp, x)}')

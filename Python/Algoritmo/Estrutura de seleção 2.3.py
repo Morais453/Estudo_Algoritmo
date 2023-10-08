@@ -1,11 +1,11 @@
-v1 = float(input('Insira um valor: '))
-v2 = float(input('Insira outro: '))
+Valor_1 = float(input('Insira um valor: '))
+Valor_2 = float(input('Insira outro: '))
 
-if v1 == v2:
+if Valor_1 == Valor_2:
     print('-'*36)
     print('Os valores identificados são iguais!')
     print('-' * 36)
-elif v1 > v2:
-    print(f'O valor {v1} é maior')
+elif Valor_1 > Valor_2:
+    print(f'O valor {Valor_1} é maior')
 else:
-    print(f'O valor {v2} é maior')
+    print(f'O valor {Valor_2} é maior')

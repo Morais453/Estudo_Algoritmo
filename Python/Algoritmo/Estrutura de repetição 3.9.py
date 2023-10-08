@@ -1,12 +1,12 @@
-n1 = n2 = n3 = 1
+Num_1 = Num_2 = Num_3 = 1
 
-cont = 3
-print(f'{n1} => {n2} => {n3}', end=' => ')
-while cont < 20:
-    soma = n1+n2+n3
-    cont += 1
+print(f'{Num_1} => {Num_2} => {Num_3}', end=' => ')
+
+for i in range(2,20):
+    soma = Num_1 + Num_2 + Num_3
+
     print(soma, end=" => ")
 
-    n1 = n2
-    n2 = n3
-    n3 = soma
+    Num_1 = Num_2
+    Num_2 = Num_3
+    Num_3 = soma
