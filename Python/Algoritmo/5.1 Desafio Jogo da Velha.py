@@ -4,7 +4,7 @@ while True:
     player1 = str(input('Informe seu nome: '))
     player2 = str(input('Informe seu nome: '))
 
-    # VARIAVEIS PARA MARCAÇÃO
+    # VARIAVEIS PARA MARCAÇÃO E CONTROLE
     V_Controle = True
     simbolo = 'X'
     Jogador = 'i'
@@ -27,11 +27,12 @@ while True:
             # DEFINIÇÃO DA JOGADA, LINHA E COLUNA
             linha = int(input('Informe onde adicionar seu simbolo na linha[1,2,3]: ')) - 1
             coluna = int(input('Informe onde adicionar seu simbolo na coluna [1,2,3]: ')) - 1
-            if matriz[linha][
-                coluna] == '':  # VERIFICAÇÃO SE A MATRIZ ESTÁ DISPONIVEL OU NÃO, SE SIM ADICIONA O SIMBOLO EQUIVALENTE AO JOGADOR E QUEBRA O LAÇO CONTINUO
+            if matriz[linha][coluna] == '':  # VERIFICAÇÃO SE A MATRIZ ESTÁ DISPONIVEL OU NÃO, SE SIM ADICIONA O SIMBOLO EQUIVALENTE AO JOGADOR E QUEBRA O LAÇO CONTINUO
                 matriz[linha][coluna] = simbolo
                 break
-            else:  # SE NÃO ESCREVE QUE JÁ TEM ITEM E CONTINUA PEDINDO UMA COORDENADA PARA O SIMBOLO
+
+            # SE NÃO ESCREVE QUE JÁ TEM ITEM E CONTINUA PEDINDO UMA COORDENADA PARA O SIMBOLO
+            else:  
                 print('Já contém item, tente novamente')
 
         # MOSTRA O TABULEIRO A CADA RODADA
@@ -60,17 +61,18 @@ while True:
                     print(f'A vitória foi de {Jogador}')
                     V_Controle = False
                     break
-
-                else:  # SE CHEGAR A 9 JOGADAS SEM VITÓRIA DECLARAR EMPATE
+                
+                # SE CHEGAR A 9 JOGADAS SEM VITÓRIA DECLARAR EMPATE
+                else:  
                     if i == 9:
                         print('Empate')
                         break
         # SE A VARIAVEL DE CONTROLE RECEBER FALSE ANTES DO LOOP PRINCIPAL ACABAR, INTERROMPER O LOOP
         if V_Controle == False:
             break
-    Esc = input('Voce quer continuar?[S/N]').upper()
+    Esc = input('Voce quer continuar com uma nova partida?[S/N]').upper()
     while Esc not in 'SN':
-        Esc = input('Voce quer continuar?[S/N]').upper()
+        Esc = input('Voce quer continuar com uma nova partida?[S/N]').upper()
     if Esc in 'S':
         matriz = [['', '', ''], ['', '', ''], ['', '', '']]
         continue
