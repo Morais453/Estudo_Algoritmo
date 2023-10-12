@@ -1,7 +1,7 @@
 soma = 0
 
 while True:
-    Num = int(input("Digite um valor para N (positivo e menor que 100): "))
+    Num = int(input("Digite um valor para N (positivo e menor que 100) para mostrar a soma da sequência: "))
     if 0 < Num < 100:
         for i in range(1, Num + 1):
             sequencia = i**2 + 1
