@@ -14,7 +14,6 @@ while True:
         if i % 2 == 0:  # DEFINIÇÃO DE NOME E SIMBOLO DE JOGADOR
             simbolo = 'X'
             Jogador = player1
-
         if i % 2 == 1:  # DEFINIÇÃO DE NOME E SIMBOLO DE JOGADOR
             simbolo = 'O'
             Jogador = player2
@@ -32,12 +31,11 @@ while True:
                 break
 
             # SE NÃO ESCREVE QUE JÁ TEM ITEM E CONTINUA PEDINDO UMA COORDENADA PARA O SIMBOLO
-            else:  
+            else:
                 print('Já contém item, tente novamente')
 
         # MOSTRA O TABULEIRO A CADA RODADA
-        print(
-            f'''{matriz[0][0]:^3}|{matriz[0][1]:^3}|{matriz[0][2]:^3}\n---|---|---\n{matriz[1][0]:^3}|{matriz[1][1]:^3}|{matriz[1][2]:^3}\n---|---|---\n{matriz[2][0]:^3}|{matriz[2][1]:^3}|{matriz[2][2]:^3}''')
+        print(f'''{matriz[0][0]:^3}|{matriz[0][1]:^3}|{matriz[0][2]:^3}\n---|---|---\n{matriz[1][0]:^3}|{matriz[1][1]:^3}|{matriz[1][2]:^3}\n---|---|---\n{matriz[2][0]:^3}|{matriz[2][1]:^3}|{matriz[2][2]:^3}''')
 
         # VERIFICAR CONDIÇÃO DE VITÓRIA A PARTIR DA QUINTA JOGADA
         if i > 4:
@@ -61,9 +59,9 @@ while True:
                     print(f'A vitória foi de {Jogador}')
                     V_Controle = False
                     break
-                
+
                 # SE CHEGAR A 9 JOGADAS SEM VITÓRIA DECLARAR EMPATE
-                else:  
+                else:
                     if i == 9:
                         print('Empate')
                         break
